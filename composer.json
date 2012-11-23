@@ -9,7 +9,8 @@
     ],
     "autoload": {
         "psr-0": {
-            "Webcam": "src/"
+            "Webcam": "src/",
+            "Integration\\Webcam": "tests/"
         }
     },
     "require": {
