@@ -1,0 +1,3 @@
+[submodule "web/rtmp-publisher"]
+	path = web/rtmp-publisher
+	url = https://github.com/bobagold/rtmp-publisher.git

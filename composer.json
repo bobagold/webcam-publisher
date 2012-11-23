@@ -1,0 +1,19 @@
+{
+    "name": "xiag/webcam-publisher",
+    "description": "Publish webcam video using rtmp-publisher to barberry",
+    "authors": [
+        {
+            "name": "Vladimir Goldobin",
+            "email": "vgold@xiag.ch"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Webcam": "src/"
+        }
+    },
+    "require": {
+
+    },
+    "minimum-stability": "dev"
+}
