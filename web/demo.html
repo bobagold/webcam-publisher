@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RTMP Publisher</title>
+    <script type="text/javascript" src="rtmp-publisher/swfobject.js"></script>
+    <script type="text/javascript">
+        var flashVars = {
+            streamer: 'rtmp://localhost/publish',
+            file:'secret',
+            onStopRecord:'obj.stopRecord'
+        };
+        swfobject.embedSWF("rtmp-publisher/RtmpPublisher.swf", "rtmp-publisher", "500", "400", "9.0.0", null, flashVars);
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body>
+<div id="rtmp-publisher">
+    <p>Flash not installed</p>
+</div>
+<script type="text/javascript">
+    var stopRecord2 = function(ok) {
+        console.log('ok', ok);
+        $.ajax('/index/secret', {success: function(data, textStatus) {
+            console.log(data, textStatus);
+        }});
+        return "vasya";
+    }
+    var obj = { stopRecord: stopRecord2 };
+</script>
+</body>
+</html>
