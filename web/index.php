@@ -7,13 +7,13 @@ if ($filePath) {
     $indexedFilePath = $publisher->indexFlv($filePath);
     if ($indexedFilePath && file_exists($indexedFilePath)) {
         $uploader = new \Webcam\BarberryUploader('http://barberry.local/');
-        header("Content-type: text/json", null, 200);
+        header("Content-type: application/json", null, 200);
         echo json_encode($uploader->upload($indexedFilePath));
         exit(0);
     }
-    header("Content-type: text/json", null, 500);
+    header("Content-type: application/json", null, 500);
     echo json_encode('unable to create index');
     exit(1);
 }
-header("Content-type: text/json", null, 404);
+header("Content-type: application/json", null, 404);
 echo json_encode('file not found');
